@@ -1,0 +1,5 @@
+content sidebar-add-custom-tab chrome/
+
+overlay	chrome://navigator/content/navigator.xul chrome://sidebar-add-custom-tab/content/sidebarOverlay2.xul
+overlay	chrome://navigator/content/navigator.xul chrome://sidebar-add-custom-tab/content/sidebarOverlay2.xul
+overlay	chrome://messenger/content/messengercompose/messengercompose.xul chrome://sidebar-add-custom-tab/content/sidebarOverlay2.xul

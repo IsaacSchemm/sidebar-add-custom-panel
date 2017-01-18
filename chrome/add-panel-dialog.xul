@@ -1,0 +1,48 @@
+<?xml version="1.0"?> <!-- -*- Mode: SGML; indent-tabs-mode: nil; -*- -->
+<!--
+
+ This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<?xml-stylesheet href="chrome://communicator/skin/" type="text/css"?>
+
+<dialog id="addSidebarPanelDialog" title="Add Tab"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  buttons="accept,cancel"
+  ondialogaccept="return doAddPanel();">
+
+  <script type="application/javascript" src="chrome://sidebar-add-custom-tab/content/add-panel-dialog.js" />
+  
+  <grid id="addSidebarPanelGrid" flex="1">
+    <columns id="addSidebarPanel_columns">
+      <column id="addSidebarPanel_labelColumn" />
+      <column flex="1" id="addSidebarPanel_editColumn" />
+    </columns>
+    <rows id="addSidebarPanel_rows">
+      <row align="center" id="addSidebarPanel_nameRow">
+        <label value="Name:"
+               class="addSidebarPanel_rowLabel"
+               accesskey="N"
+               control="addSidebarPanel_namePicker"/>
+        <textbox id="addSidebarPanel_namePicker"/>
+      </row>
+      <row align="center" id="addSidebarPanel_locationRow">
+        <label value="URL:"
+               class="addSidebarPanel_rowLabel"
+               accesskey="U"
+               control="addSidebarPanel_locationField"/>
+        <textbox id="addSidebarPanel_locationField"
+                 class="uri-element"/>
+      </row>
+      <row align="center" id="addSidebarPanel_persistentRow">
+		<checkbox id="addSidebarPanel_persistentField"
+                  label="Persistent"
+                  accesskey="P"/>
+        <label id="addSidebarPanel_rowLabel"
+               value="Persistent"
+               hidden="true"/>
+      </row>
+    </rows>
+  </grid>
+</dialog>

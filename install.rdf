@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+  <Description
+    about="urn:mozilla:install-manifest"
+
+    em:name="Sidebar Add Custom Tab"
+    em:description="Adds an 'add custom tab' option to the Tabs drop-down menu of SeaMonkey's sidebar."
+    em:creator="Isaac Schemm"
+
+    em:id="sidebar-add-custom-tab@lakora.us"
+    em:version="1.0.0"
+    em:homepageURL="https://github.com/IsaacSchemm/sidebar-add-custom-tab"
+
+    em:iconURL="chrome://sidebar-add-custom-tab/content/icon.png" >
+
+    <em:targetApplication>
+	  <!-- SeaMonkey -->
+	  <Description>
+		<em:id>{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}</em:id>
+		<em:minVersion>2.46</em:minVersion>
+		<em:maxVersion>*</em:maxVersion>
+	  </Description>
+	</em:targetApplication>
+
+    <em:file>
+      <Description
+        about="urn:mozilla:extension:sidebar-add-custom-tab"
+        em:package="content/sidebar-add-custom-tab/" />
+    </em:file>
+
+  </Description>
+
+</RDF>
